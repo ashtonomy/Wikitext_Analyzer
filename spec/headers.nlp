@@ -1,0 +1,19 @@
+###############################################
+# FILE: headers
+# SUBJ: comment
+# AUTH: Your Name
+# CREATED: 2022-7-18 8:52:35
+# MODIFIED:
+###############################################
+
+@NODES _LINE
+
+@POST
+X("header") = N("$text",2);
+
+@RULES
+_header <-
+	_xWILD [min=2 match=(\=)]	### (1)
+	_xWILD [fail=(\=)]			### (2)
+	_xWILD [min=2 match=(\=)]	### (3)
+	@@

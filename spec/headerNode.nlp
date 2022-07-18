@@ -1,0 +1,21 @@
+###############################################
+# FILE: headerNode
+# SUBJ: comment
+# AUTH: Your Name
+# CREATED: 2022-7-18 9:32:25
+# MODIFIED:
+###############################################
+
+@NODES _ROOT
+
+@PRE
+<1,1> var("header");
+
+@POST
+S("header") = N("header",1);
+single();
+
+@RULES
+_header <-
+	_LINE	### (1)
+	@@
