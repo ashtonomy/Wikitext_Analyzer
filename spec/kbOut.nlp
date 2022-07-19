@@ -1,20 +1,13 @@
 ###############################################
-# FILE: headerNode
+# FILE: kbOut
 # SUBJ: comment
 # AUTH: Your Name
-# CREATED: 2022-7-18 9:32:25
+# CREATED: 2022-7-19 10:35:42
 # MODIFIED:
 ###############################################
 
-@NODES _ROOT
+@CODE
 
-@PRE
-<1,1> var("header");
+DisplayKB(G("words"), 1);
 
-@POST
-splice(1,1);
-
-@RULES
-_xNIL <-
-	_LINE	### (1)
-	@@
+@@CODE

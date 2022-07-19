@@ -10,10 +10,11 @@
 
 @POST
 S("header") = N("header",1);
+S("count") = 5;
 single();
 
 @RULES
 _headerZone <-
-	_header							### (1)
-	_xWILD [plus fails=(_header _xEND)]	### (2)
+	_headerFive							### (1)
+	_xWILD [plus fails=(_headerFive _headerFour _headerThree _headerTwo _xEND)]	### (2)
 	@@

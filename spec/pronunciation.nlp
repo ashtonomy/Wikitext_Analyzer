@@ -1,20 +1,14 @@
 ###############################################
-# FILE: headerNode
+# FILE: pronunciation
 # SUBJ: comment
 # AUTH: Your Name
-# CREATED: 2022-7-18 9:32:25
+# CREATED: 2022-7-19 10:46:27
 # MODIFIED:
 ###############################################
 
 @NODES _ROOT
 
-@PRE
-<1,1> var("header");
-
-@POST
-splice(1,1);
-
 @RULES
 _xNIL <-
-	_LINE	### (1)
+	_xNIL	### (1)
 	@@

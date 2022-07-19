@@ -1,0 +1,15 @@
+words
+  language
+    English: 
+      language=[English]
+      pronunciation
+    French: 
+      language=[French]
+    Middle English: 
+      language=[Middle English]
+    Middle French: 
+      language=[Middle French]
+    Old French: 
+      language=[Old French]
+      pronunciation
+
