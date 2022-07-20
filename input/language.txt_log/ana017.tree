@@ -1,5 +1,9 @@
 
-FINAL OUTPUT TREE:
+***************
+    PASS 17 (pronunciation)
+***************
+
+PAT OUTPUT TREE:
 
 _ROOT [0,11256,0,11195,0,0,node,un]
    _language [0,9903,0,9856,14,17,node, ("con" concept:"<name>")]

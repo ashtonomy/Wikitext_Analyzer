@@ -35,7 +35,10 @@ _headerFour <-
 	@@
 
 @POST
-S("header") = N("$text",2);
+if (X("header")) 
+	S("header") = X("header");
+else 
+	S("header") = N("$text", 2);
 X("header") = 1;
 X("count") = 3;
 single();
