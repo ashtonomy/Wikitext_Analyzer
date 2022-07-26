@@ -2,6 +2,7 @@ tokenize	nil	# Gen:   Convert input to token list
 nlp	KBFuncs	# comment
 nlp	initKB	# comment
 nlp	Lines	# comment
+nlp	funcs	# comment
 nlp	RemoveWhiteSpace	# comment
 nlp	headerNames	# comment
 nlp	headers	# comment
@@ -15,4 +16,5 @@ nlp	headerTwoLabels	# comment
 nlp	headerThreeLabels	# comment
 nlp	etymology	# comment
 nlp	pronunciation	# comment
+nlp	posKB	# comment
 nlp	kbOut	# comment

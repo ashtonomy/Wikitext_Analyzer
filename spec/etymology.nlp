@@ -13,6 +13,7 @@
 
 @POST
 S("con") = MakeCountCon(X("con", 2), "etymology");
+S("pos") = makeconcept(S("con"), "pos");
 single();
 
 @RULES
