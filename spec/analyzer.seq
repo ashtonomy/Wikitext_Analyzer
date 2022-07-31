@@ -8,10 +8,11 @@ nlp	headerNames	# comment
 nlp	headers	# comment
 nlp	headerNode	# comment
 nlp	Item	# comment
-nlp	header_zone_five	# comment
-nlp	header_zone_four	# comment
-nlp	header_zone_three	# comment
-nlp	header_zone_two	# comment
+rec	header_zone	# comment
+/nlp	header_zone_five	# comment
+/nlp	header_zone_four	# comment
+/nlp	header_zone_three	# comment
+/nlp	header_zone_two	# comment
 nlp	headerTwoLabels	# comment
 nlp	headerThreeLabels	# comment
 nlp	etymology	# comment

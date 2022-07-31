@@ -1,0 +1,97 @@
+###############################################
+# FILE: header_zone
+# SUBJ: comment
+# AUTH: Ashton
+# CREATED: 2022-7-31 10:34:4
+# MODIFIED:
+###############################################
+
+@NODES _ROOT 
+
+@CODE
+G("equals") = 5;
+@@CODE
+
+@CHECK
+if (N("count", 1) != G("equals")) {
+	fail();
+}
+@@CHECK
+
+@POST
+S("header") = N("header",1);
+S("count") = N("count", 1);
+single();
+
+@RULES
+_headerZone <-
+	_headerFive							### (1)
+	_xWILD [plus fails=(_headerFive _headerFour _headerThree _headerTwo _xEND)]	### (2)
+	@@
+
+@CHECK
+if (N("count", 1) != G("equals")) {
+	fail();
+}
+@@CHECK
+
+@POST
+S("header") = N("header",1);
+S("count") = N("count", 1);
+single();
+
+@RULES
+_headerZone <-
+	_headerFour																	### (1)
+	_xWILD [plus fails=(_headerFour _headerThree _headerTwo _xEND)]	### (2)
+	@@
+
+@CHECK
+if (N("count", 1) != G("equals")) {
+	fail();
+}
+@@CHECK
+
+@POST
+S("header") = N("header",1);
+S("count") = N("count", 1);
+single();
+
+@RULES
+_headerZone <-
+	_headerThree																	### (1)
+	_xWILD [plus fails=(_headerThree _headerTwo _xEND)]	### (2)
+	@@
+
+@CHECK
+if (N("count", 1) != G("equals")) {
+	fail();
+}
+@@CHECK
+
+@POST
+S("header") = N("header",1);
+S("count") = N("count", 1);
+single();
+
+@RULES
+_headerZone <-
+	_headerTwo																	### (1)
+	_xWILD [plus fails=(_headerTwo _xEND)]	### (2)
+	@@
+
+@CHECK
+if (G("equals") < 1) {
+	fail();
+}
+
+@POST
+if (G("equals") > 0) {	
+	G("equals") = G("equals") - 1;
+}
+
+@RULES
+_xNIL <-
+	_xANY	### (1)
+	_xEOF	### (2)
+	@@
