@@ -11,54 +11,15 @@
 @POST
 S("header") = N("$text",2);
 X("header") = 1;
-X("count") = 5;
+S("count") = strlength(N("$text",1));
+"headers.txt" << SpacesStr(S("count")) << S("count") << " " << S("header") << "\n";
+if (S("count") > G("max header"))
+	G("max header") = S("count");
 single();
 
 @RULES
-_headerFive <-
-	_xWILD [min=5 max=5 match=(\=)]	### (1)
-	_xWILD [plus fail=(\=)]			### (2)
-	_xWILD [min=5 max=5 match=(\=)]	### (3)
-	@@
-
-@POST
-S("header") = N("$text",2);
-X("header") = 1;
-X("count") = 4;
-single();
-
-@RULES
-_headerFour <-
-	_xWILD [min=4 max=4 match=(\=)]	### (1)
-	_xWILD [plus fail=(\=)]			### (2)
-	_xWILD [min=4 max=4 match=(\=)]	### (3)
-	@@
-
-@POST
-if (X("header")) 
-	S("header") = X("header");
-else 
-	S("header") = N("$text", 2);
-X("header") = 1;
-X("count") = 3;
-single();
-
-@RULES
-_headerThree <-
-	_xWILD [min=3 max=3 match=(\=)]	### (1)
-	_xWILD [plus fail=(\=)]			### (2)
-	_xWILD [min=3 max=3 match=(\=)]	### (3)
-	@@
-
-@POST
-S("header") = N("$text",2);
-X("header") = 1;
-X("count") = 2;
-single();
-
-@RULES
-_headerTwo <-
-	_xWILD [min=2 max=2 match=(\=)]	### (1)
-	_xWILD [plus fail=(\=)]			### (2)
-	_xWILD [min=2 max=2 match=(\=)]	### (3)
+_header <-
+	_xWILD [min=2 match=(\=)]	### (1)
+	_xWILD [plus fail=(\=)]		### (2)
+	_xWILD [min=2 match=(\=)]	### (3)
 	@@

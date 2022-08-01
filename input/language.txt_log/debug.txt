@@ -1,0 +1,36 @@
+header: 5 Synonyms
+header: 5 Hypernyms
+header: 5 Hyponyms
+header: 5 Derived terms
+header: 5 Related terms
+header: 5 Translations
+max: 4
+header: 4 Noun
+header: 4 Verb
+header: 4 Interjection
+header: 4 See also
+header: 4 Noun
+header: 4 Related terms
+header: 4 Descendants
+header: 4 Related terms
+header: 4 Descendants
+max: 3
+header: 3 Pronunciation
+header: 3 Etymology 1
+header: 3 Etymology 2
+header: 3 References
+header: 3 Noun
+header: 3 Noun
+header: 3 Alternative forms
+header: 3 Etymology
+header: 3 Noun
+header: 3 Alternative forms
+header: 3 Etymology
+header: 3 Pronunciation
+header: 3 Noun
+max: 2
+header: 2 English
+header: 2 French
+header: 2 Middle English
+header: 2 Middle French
+header: 2 Old French
